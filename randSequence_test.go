@@ -3,7 +3,7 @@ package randSequence_test
 import (
 	"fmt"
 
-	. "github.com/nicday/katas/util/randSequence"
+	. "github.com/nicday/randSequence"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -45,8 +45,6 @@ var _ = Describe("RandSequence", func() {
 					sourceLen := len(source)
 
 					s := generator.Generate(sourceLen * 20)
-
-					fmt.Println(s)
 
 					for _, c := range s {
 						Expect(source).To(ContainElement(c))
